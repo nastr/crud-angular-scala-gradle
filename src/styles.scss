@@ -1,1 +1,36 @@
-/* You can add global styles to this file, and also import other style files */
+.highlight{
+  background: #52a0a9;
+}
+
+table {
+  width: 100%;
+  border: 1px solid black;
+  text-align: center;
+}
+
+th, td, th {
+  text-align: center;
+  vertical-align: middle;
+  border: 1px solid black;
+  font-size: 30px;
+  padding: 10px;
+}
+
+form, label, input {
+  font-size: 30px;
+  padding: 10px;
+}
+
+input {
+  margin-top: 10px;
+}
+
+a {
+  font-size: 30px;
+  color: blue;
+}
+
+a:hover {
+  cursor: pointer;
+  color: blue;
+}

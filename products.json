@@ -1,0 +1,29 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "a2qwe",
+      "color": "a2qwe"
+    },
+    {
+      "id": 2,
+      "name": "234",
+      "color": "234"
+    },
+    {
+      "id": 3,
+      "name": "asd",
+      "color": "345qwe"
+    },
+    {
+      "name": "arwe",
+      "color": "werwe",
+      "id": 4
+    },
+    {
+      "name": "qwrwet2436578465",
+      "color": "werwet5768",
+      "id": 5
+    }
+  ]
+}
