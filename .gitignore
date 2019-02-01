@@ -1,41 +1,29 @@
-# See http://help.github.com/ignore-files/ for more about ignoring files.
+.gradle
+/build/
+!gradle/wrapper/gradle-wrapper.jar
 
-# compiled output
-/dist
-/tmp
-/out-tsc
-
-# dependencies
-/node_modules
-
-# IDEs and editors
-/.idea
-.project
+### STS ###
+.apt_generated
 .classpath
-.c9/
-*.launch
-.settings/
-*.sublime-workspace
+.factorypath
+.project
+.settings
+.springBeans
 
-# IDE - VSCode
-.vscode/*
-!.vscode/settings.json
-!.vscode/tasks.json
-!.vscode/launch.json
-!.vscode/extensions.json
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
 
-# misc
-/.sass-cache
-/connect.lock
-/coverage
-/libpeerconnection.log
-npm-debug.log
-yarn-error.log
-testem.log
-/typings
+### Node
+frontend/node_modules
+frontend/build
+frontend/dist
+*.ico
 
-# System Files
-.DS_Store
-Thumbs.db
+### Atom
+.editorconfig
 
 *package-lock.json
+*.DS_Store

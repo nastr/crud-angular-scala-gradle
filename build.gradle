@@ -1,0 +1,48 @@
+buildscript {
+    ext {
+        springBootVersion = '2.1.2.RELEASE'
+    }
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}" as Object)
+    }
+}
+
+apply plugin: 'java'
+apply plugin: 'scala'
+apply plugin: 'idea'
+apply plugin: 'org.springframework.boot'
+apply plugin: 'io.spring.dependency-management'
+
+
+group = 'com.nastrsoft'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = 1.8
+
+bootJar {
+//    archivesBaseName = "yourapp.jar"
+    mainClassName = 'com.nastrsoft.Application'
+
+    from('frontend/dist') {
+        into 'static'
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+processResources.dependsOn('frontend:build')
+
+dependencies {
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-web'
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-data-jpa'
+    testCompile group: 'org.springframework.boot', name: 'spring-boot-starter-test'
+
+    compile group: 'org.scala-lang', name: 'scala-library', version: '2.13.0-M5-6e0cba7'
+
+    compile group: 'com.h2database', name: 'h2', version: '1.4.197'
+}
+// https://stackoverflow.com/questions/45146201/how-to-add-static-files-to-jar-using-gradle-build-in-spring-boot-angular-2-pro

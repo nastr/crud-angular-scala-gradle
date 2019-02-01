@@ -1,0 +1,27 @@
+plugins {
+    id "com.moowork.node" version "1.2.0"
+}
+
+apply plugin: 'com.moowork.node'
+
+version '0.0.1'
+
+task clean {
+    doLast {
+        delete "dist"
+    }
+}
+
+node {
+    version = '10.9.0'
+    npmVersion = '6.7.0'
+    download = true
+    workDir = file("${project.buildDir}/node" as Object)
+    nodeModulesDir = file("${project.projectDir}" as Object)
+}
+
+task build(type: NpmTask) {
+    args = ['run', 'build']
+}
+
+build.dependsOn(npm_install)
