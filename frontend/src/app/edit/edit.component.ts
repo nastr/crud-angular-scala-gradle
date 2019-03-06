@@ -23,8 +23,8 @@ export class EditComponent implements OnInit {
 
     ngOnInit(): void {
         this.activatedRoute.params.subscribe(params => {
-            console.log(this.activatedRoute.snapshot.url); // array of states
-            console.log(this.activatedRoute.snapshot.url[0].path);
+            // console.log(this.activatedRoute.snapshot.url); // array of states
+            // console.log(this.activatedRoute.snapshot.url[0].path);
             this.id = +params['id'];
         });
         this.dataService.get(this.id).subscribe(product => {

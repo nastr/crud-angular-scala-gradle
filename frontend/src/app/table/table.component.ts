@@ -15,7 +15,7 @@ export class TableComponent implements OnInit {
 
     ngOnInit() {
         this.dataService.list().subscribe(res => {
-            console.log("res\t" + res);
+            // console.log("res\t" + res);
             this.products = res;
         });
     }
